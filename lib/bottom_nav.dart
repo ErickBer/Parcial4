@@ -38,6 +38,10 @@ class _BNavigatorState extends State<BNavigator> {
             BottomNavigationBarItem(
             icon: Icon(Icons.bookmark_add),
             label: 'Reservas'
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.airplane_ticket),
+              label: 'Vuelos' 
             )
       ] 
       );

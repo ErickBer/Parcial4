@@ -27,7 +27,7 @@ class _ReservasState extends State<Reservas> {
       FirebaseFirestore.instance.collection('reservas');
       
 
-//insertar producto
+//insertar reserva
   Future<void> _create([DocumentSnapshot? documentSnapshot]) async {
     await showModalBottomSheet(
         isScrollControlled: true,
@@ -263,12 +263,12 @@ class _ReservasState extends State<Reservas> {
         });
   }
 
-//borrar productos
+//borrar reserva
   Future<void> _delete(String productId) async {
     await _reservados.doc(productId).delete();
 
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('El producto fue eliminado correctamente')));
+        content: Text('La reserva fue eliminada correctamente')));
   }
   @override
   Widget build(BuildContext context) {
@@ -317,7 +317,7 @@ class _ReservasState extends State<Reservas> {
             );
           },
         ),
-// agregar productos
+// agregar la reserva
         floatingActionButton: FloatingActionButton(
           onPressed: () => _create(),
           child: const Icon(Icons.add),

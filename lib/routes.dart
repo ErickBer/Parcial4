@@ -3,6 +3,7 @@ import 'package:parcial4/aviones.dart';
 import 'package:parcial4/clientes.dart';
 import 'package:parcial4/principal.dart';
 import 'package:parcial4/reservas.dart';
+import 'package:parcial4/vuelos.dart';
 
 class Routes extends StatelessWidget {
   final int index;
@@ -13,7 +14,8 @@ class Routes extends StatelessWidget {
     List<Widget> myList = [
       Aviones(),
       const Clientes(),
-      Reservas()
+      Reservas(),
+      Vuelos()
     ];
     return myList[index];
   }
